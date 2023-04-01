@@ -3,10 +3,10 @@ using System.Reflection;
 
 public class Progetto
 {
-    private static string alfabeto = "abcdefghijklmnopqrstuvwxyz";
+    private static string Alfabeto = "abcdefghijklmnopqrstuvwxyz";
     private static int contatore = 0;
 
-    public static string Es1(string s, int n)
+    public static string Prima_richiesta(string s, int n)
     {
         int index = 0;
         string stringaFinale = "";
@@ -14,7 +14,7 @@ public class Progetto
         {
             s = s.ToLower();
             index = 0;
-            while (item != alfabeto[index])
+            while (item != Alfabeto[index])
             {
                 index++;
             }
@@ -23,8 +23,31 @@ public class Progetto
             {
                 index -= 25;
             }
-            stringaFinale += alfabeto[index];
+            stringaFinale += Alfabeto[index];
         }
         return stringaFinale;
     }
+
+    public static string Seconda_richiesta(string s, int n)
+    {
+        int index = 0;
+        string stringaFinale = "";
+        foreach (var item in s)
+        {
+            s = s.ToLower();
+            index = 0;
+            while (item != Alfabeto[index])
+            {
+                index++;
+            }
+            index -= n;
+            if (index < 0)
+            {
+                index += 25;
+            }
+            stringaFinale += Alfabeto[index];
+        }
+        return stringaFinale;
+    }
+    
 }
