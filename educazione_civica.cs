@@ -49,5 +49,21 @@ public class Progetto
         }
         return stringaFinale;
     }
-    
+
+    public static int Terza_richiesta(string s, int n)
+    {
+        int index = 0;
+        int tot = 0;
+        foreach (var item in s)
+        {
+            s = s.ToLower();
+            index = 0;
+            while (item != Alfabeto[index])
+            {
+                index++;
+            }
+            tot += index + 1;
+        }
+        return tot * n;
+    }
 }
