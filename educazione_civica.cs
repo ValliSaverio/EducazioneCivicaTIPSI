@@ -66,4 +66,21 @@ public class Progetto
         }
         return tot * n;
     }
+
+    public static double Quarta_richiesta(string s, int n)
+    {
+        int index = 0;
+        double tot = 1;
+        foreach (var item in s)
+        {
+            s = s.ToLower();
+            index = 0;
+            while (item != Alfabeto[index])
+            {
+                index++;
+            }
+            tot *= (index + 1);
+        }
+        return Math.Ceiling(tot / n);
+    }
 }
