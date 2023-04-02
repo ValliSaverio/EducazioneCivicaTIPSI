@@ -83,4 +83,12 @@ public class Progetto
         }
         return Math.Ceiling(tot / n);
     }
+    public static double Quinta_richiesta(string s, int n)
+    {
+        contatore++;
+        if (n % 2 == 0) { return Terza_richiesta(s, n); }
+        else
+            return Quarta_richiesta(s, n);
+
+    }
 }
