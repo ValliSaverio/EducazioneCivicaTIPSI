@@ -91,4 +91,13 @@ public class Progetto
             return Quarta_richiesta(s, n);
 
     }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Progetto.Prima_richiesta("ciao", 10));
+        Console.WriteLine(Progetto.Seconda_richiesta("msky", 10));
+        Console.WriteLine(Progetto.Terza_richiesta("ciao", 10));
+        Console.WriteLine(Progetto.Quarta_richiesta("ciao", 10));
+        Console.WriteLine(Progetto.Quinta_richiesta("ciao", 10));
+    }
 }
